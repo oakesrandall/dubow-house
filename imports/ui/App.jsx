@@ -59,7 +59,7 @@ class App extends Component {
     return (
       <div className="container">
         <header>
-          <h1>Todo List ({this.props.incompleteCount})</h1>
+          <h1>Dubow House Project Manager</h1>
 
           <label className="hide-completed">
             <input
@@ -73,12 +73,14 @@ class App extends Component {
 
           <AccountsUIWrapper />
 
+          <h3>Pending Tasks:  ({this.props.incompleteCount})</h3>
+
           { this.props.currentUser ?
             <form className="new-task" onSubmit={this.handleSubmit.bind(this)} >
               <input
                 type="text"
                 ref="textInput"
-                placeholder="Type to add new tasks"
+                placeholder="Enter new tasks here"
               />
             </form> : ''
           }
